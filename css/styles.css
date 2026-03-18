@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #4b0082, #800080);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+}
+
+/* Título */
+.title {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Menú */
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+/* Botón */
+.menu-btn {
+    background-color: #ffd700;
+    color: #4b0082;
+    border: none;
+    padding: 20px 40px;
+    margin: auto;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.menu-btn:disabled{
+    background-color: #84837d;
+}
+
+/* Hover */
+.menu-btn:hover {
+    transform: scale(1.1);
+    background-color: #ffea00;
+}
+.menu-btn:hover:disabled {
+    transform: scale(1);
+    background-color: #84837d;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+/* Tablero */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 5px;
+    background-color: rgba(255,255,255,0.2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Slots */
+.slot {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0,0,0,0.2);
+    border: 2px dashed #ffd700;
+}
+
+/* Área de piezas */
+.pieces {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 10px;
+}
+
+/* Piezas */
+.piece {
+    width: 120px;
+    height: 120px;
+    cursor: grab;
+    border-radius: 8px;
+    border: 2px solid white;
+}
+
+.missing-slot {
+    background-color: rgba(255, 215, 0, 0.2);
+    border: 2px dashed #ffd700;
+    cursor: pointer;
+    position: relative;
+}
+
+.missing-slot::after {
+    content: "?";
+    font-size: 2rem;
+    color: #ffd700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    color: #4b0082;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+.modal-content button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ffd700;
+    border: none;
+    cursor: pointer;
+}
+.missing-slot::after {
+    content: "?";
+}

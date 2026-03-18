@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rompecabezas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <h1 class="title">Arma el rompecabezas</h1>
+
+    <div class="game-container">
+
+        <!-- Tablero -->
+        <div id="board" class="board"></div>
+
+        <!-- Piezas -->
+        <div id="pieces" class="pieces"></div>
+
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Responde estas preguntas...</h2>
+
+            <p>¿Qué significa servir?</p>
+            <input type="text">
+
+            <p>¿Cómo ha sido el caminar después de grupo?</p>
+            <input type="text">
+
+            <p>¿Quién está para ti?</p>
+            <input type="text">
+
+            <button onclick="desbloquearPieza()">Continuar</button>
+        </div>
+    </div>
+
+    <div id="finalModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>¿Dónde está tu hermano?</h2>
+
+            <button onclick="descargarBoleto()">
+                Continuar
+            </button>
+        </div>
+    </div>
+    <script src="js/puzzle.js"></script>
+</body>
+</html>
